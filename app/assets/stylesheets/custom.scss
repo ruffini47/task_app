@@ -3,11 +3,6 @@
 
 /* 共通 */
 
-/* ヘッダー部分の背景のカラーを変更する */
-.navbar {
-  background-color: #008080;
-}
-
 body {
   padding-top: 60px;
 }
@@ -57,8 +52,15 @@ p {
 
 /* ヘッダー */
 
-// text-tranceform: uppercase 解除
-// font-sytle: italic
+// B1 ヘッダー部分の背景のカラーを変更する
+.navbar {
+  background-color: #008080;
+  font-weight: bold;
+  color: #fff;
+}
+
+// B3 ヘッダーロゴの大文字固定表示を解除＆イタリック体（斜文字）にする
+// B4 ヘッダーロゴの文字色は通常時ホワイト、ホバー時グレーにする
 #logo {
   float: left;
   margin-right: 10px;
@@ -72,8 +74,18 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #808080;
   text-decoration: none;
+}
+
+// B5 各リストを太字にする、文字色はホワイト、ホバー時はグレーにする
+#nav{
+  color: #fff;
+  font-weight: bold;
+}
+
+#nav:hover{
+  color: #808080;
 }
 
 /* デバッグウインドウ */
