@@ -1,0 +1,25 @@
+<% provide(:title, 'All Tasks') %>
+<h1><%= @user.name %>のタスク一覧</h1>
+
+<div class="col-md-10 col-md-offset-1">
+  <table class="table table-condensed table-hover" id="table-users">
+    <thead>
+      <tr>
+        <th class="left">名称</th>
+        <th class="left">詳細</th>
+        <th class="left">ユーザーid</th>
+        <th class="left">作成日</th>
+        <th class="left">更新日</th>
+      </tr>
+    </thead>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td class="left"><%= task.title %></td>
+        <td calss="left"><%= task.details %></td>
+        <td class="left"><%= task.user_id %></td>
+        <td class="left"><%= task.created_at %></td>
+        <td class="left"><%= task.updated_at %></td>
+      </tr>
+    <% end %>
+  </table>  
+</div>
