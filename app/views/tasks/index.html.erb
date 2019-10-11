@@ -5,6 +5,7 @@
   <table class="table table-condensed table-hover" id="table-users">
     <thead>
       <tr>
+        <th class="left">id</th>
         <th class="left">名称</th>
         <th class="left">詳細</th>
         <th class="left">ユーザーid</th>
@@ -14,6 +15,7 @@
     </thead>
     <% @tasks.each do |task| %>
       <tr>
+        <td class="left"><%= task.id %></td>
         <td class="left"><%= task.title %></td>
         <td calss="left"><%= task.details %></td>
         <td class="left"><%= task.user_id %></td>
