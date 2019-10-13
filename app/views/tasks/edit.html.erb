@@ -2,6 +2,8 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-3">
     <%= form_with(model: @task, url:user_task_path(params[:user_id],params[:id]), local: true, method: :patch) do |t| %>
+      <%= render 'shared/error_messages_task', object: @task %>
+    
       <%= t.label :title, class: "label-user--edit" %>
       <%= t.text_field :title, class: "form-control" %>
       

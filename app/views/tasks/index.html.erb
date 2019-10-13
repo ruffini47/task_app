@@ -21,6 +21,12 @@
         <td class="left"><%= task.user_id %></td>
         <td class="left"><%= task.created_at %></td>
         <td class="left"><%= task.updated_at %></td>
+        
+        <td class="left">
+          <%= link_to "編集", edit_user_task_path(@user.id, task), class: "btn btn-success" %>
+          <%= link_to "削除", user_task_path(@user.id, task), method: :delete,
+                data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %>
+        </td>
       </tr>
     <% end %>
   </table>  
