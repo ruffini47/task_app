@@ -104,6 +104,17 @@ li .header-list:hover {
     color: #808080 !important;
 }
 
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #777777;
+    white-space: nowrap;
+    background-color: gainsboro;
+}
+
+
 // B6 各リストホバー時、背景色が部分的に反転しないようにする
 
 #dropdown-title {
