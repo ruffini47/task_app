@@ -61,8 +61,8 @@ p {
 /* ヘッダー */
 
 // B1 ヘッダー部分の背景のカラーを変更する
-.navbar {
-  background-color: #008080;
+#header {
+    background-color: teal;
 }
 
 // B3 ヘッダーロゴの大文字固定表示を解除＆イタリック体（斜文字）にする
@@ -85,13 +85,29 @@ p {
 }
 
 // B5 各リストを太字にする、文字色はホワイト、ホバー時はグレーにする
-#nav{
-  color: #fff;
-  font-weight: bold;
+
+.nav>li>a {
+    color: #fff !important;
+    font-weight: bold;
+} 
+
+.nav>li>a:hover{
+    color: #808080 !important
+} 
+
+li .header-list {
+    color: #fff !important;
+    font-weight: bold;
 }
 
-#nav:hover{
-  color: #808080;
+li .header-list:hover {
+    color: #808080 !important;
+}
+
+// B6 各リストホバー時、背景色が部分的に反転しないようにする
+
+#dropdown-title {
+    background-color: teal;
 }
 
 /* デバッグウインドウ */
@@ -121,4 +137,57 @@ p {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+
+
+
+
+
+element.style {
+}
+//@media (min-width: 768px)
+.container {
+    width: 750px;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #fff;
+}
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container:before, .container:after {
+    display: table;
+    content: " ";
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+.container:after {
+    clear: both;
+}
+.container:before, .container:after {
+    display: table;
+    content: " ";
+}
+*:before, *:after {
+    box-sizing: border-box;
 }
