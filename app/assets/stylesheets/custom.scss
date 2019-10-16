@@ -19,6 +19,8 @@ textarea {
   text-align: left;
 }
 
+// 表の水平方向真ん中に文字を表示する
+
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
 vertical-align: middle;
 }
@@ -104,6 +106,8 @@ li .header-list:hover {
     color: #808080 !important;
 }
 
+// ゲストユーザーの下のユーザー、タスクの項目の背景をグレーに
+
 .dropdown-header {
     display: block;
     padding: 3px 20px;
@@ -119,6 +123,35 @@ li .header-list:hover {
 
 #dropdown-title {
     background-color: teal;
+}
+
+// static pages
+
+#top-main {
+    background-color: rgba(255,255,255,0);
+}
+
+#top-main-title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.label-form {
+    margin-top: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 /* デバッグウインドウ */
@@ -148,57 +181,4 @@ li .header-list:hover {
   .form-control {
     color: $state-danger-text;
   }
-}
-
-
-
-
-
-
-element.style {
-}
-//@media (min-width: 768px)
-.container {
-    width: 750px;
-}
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-}
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    color: #333333;
-    background-color: #fff;
-}
-html {
-    -webkit-tap-highlight-color: transparent;
-}
-
-.container:before, .container:after {
-    display: table;
-    content: " ";
-}
-*:before, *:after {
-    box-sizing: border-box;
-}
-.container:after {
-    clear: both;
-}
-.container:before, .container:after {
-    display: table;
-    content: " ";
-}
-*:before, *:after {
-    box-sizing: border-box;
 }
