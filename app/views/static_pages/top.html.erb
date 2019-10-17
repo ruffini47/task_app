@@ -6,7 +6,7 @@
       <p>TaskAppは簡易ToDo管理ツールです。</p>
       <p>↓↓初めてのご利用↓↓</p>
       <%= link_to "アカウント作成", '#', class: "btn btn-lg btn-success" %>
-      <div style="margin-top: 10px;">
+      <div class="between_button">
         <%= link_to "ゲストログイン（管理権限）", '#', class: "btn btn-danger" %>
         <%= link_to "ゲストログイン（一般権限）", '#', class: "btn btn-warning" %>
       </div>
@@ -16,11 +16,11 @@
     <h1>ログイン</h1>
      <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
 
-      <%= f.label :email, class: "label-form" %>
+      <%= f.label :email, "メールアドレス",class: "label-form" %>
       <%= f.text_field :email, class: "form-control" %>
       
-      <%= f.label :password, class: "label-form" %>
-      <%= f.text_field :password, class: "form-control" %>
+      <%= f.label :password, "パスワード", class: "label-form" %>
+      <%= f.password_field :password, class: "form-control" %>
       
       <%= f.label :remember_me, class: "checkbox inline checkbox-login", for: "remember-me" do %>
         <%= f.check_box :remember_me, id: "remember-me" %>
