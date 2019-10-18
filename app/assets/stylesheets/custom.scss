@@ -132,11 +132,23 @@ li .header-list:hover {
     margin-top: 5px;
 }
 
-.form-control {
+.signup {
     background-color: aliceblue;
 }
 
 .between_button {
+  margin-top: 10px;
+}
+
+.create_account {
+  pointer-events: none;
+}
+
+.log_in {
+  pointer-events: none;
+}
+
+.log_in_button {
   margin-top: 10px;
 }
 
