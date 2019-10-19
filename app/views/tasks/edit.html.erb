@@ -9,15 +9,9 @@
       
       <%= t.label :details, class: "label-user--edit" %>
       <%= t.text_area :details, class: "form-control", cols: 8, rows: 5 %>
-    
-    
-    <%#  <%= t.label :user_id, class: "label-signup" %>
-    <%#  <%= t.text_field :user_id, class: "form-control" %>
   
-      <%= t.submit '更新', class: "btn btn-primary btn-lg btn-signup" %>
-      <button type="reset" onclick="location.href='/users/<%= params[:user_id] %>/tasks'" class="btn btn-default btn-basic-info">
-                キャンセル
-              </button>
+      <%= t.submit '更新', class: "btn btn-primary btn-signup" %>
+      <a class="btn btn-default btn-form cansel" href='/users/<%= params[:user_id] %>/tasks'>キャンセル</a>
     <% end %>
   </div>
 </div>
