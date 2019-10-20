@@ -1,6 +1,6 @@
 <h1>タスク新規作成</h1>
 <div class="row">
-  <div class="col-md-8 col-md-offset-3">
+  <div class="col-md-8 col-md-offset-2">
     <%= form_with(model: @task, url:user_tasks_path(params[:user_id]), local: true) do |t| %>
       <%= render 'shared/error_messages_task', object: @task %>
 
@@ -9,9 +9,6 @@
       
       <%= t.label :details, class: "label-signup" %>
       <%= t.text_area :details, class: "form-control", cols: 8, rows: 5 %>
-    
-    <%#  <%= t.label :user_id, class: "label-signup" %>
-    <%#  <%= t.text_field :user_id, class: "form-control" %>
   
       <%= t.submit '新規登録', class: "btn btn-primary btn-lg btn-signup" %>
     <% end %>

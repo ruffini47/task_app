@@ -14,16 +14,14 @@
       <tbody>  
         <tr>
           <td class="h4">
-            <%= link_to user_task_path(@user.id, task) do %>
-              <i class="Myclass"></i><em><%= task.title %></em>
-            <% end %>
+            <%= link_to "#{task.title}", user_task_path(@user.id, task) %>
           </td>
           <td><%= l(task.created_at, format: :long) %></td>
 
           <td>
             <%= link_to "編集", edit_user_task_path(@user.id, task), class: "btn btn-success" %>
             <%= link_to "削除", user_task_path(@user.id, task), method: :delete,
-                  data: { confirm: "を削除してよろしいですか？" }, class: "btn btn-danger" %>
+                  data: { confirm: "「#{task.title}」を削除します。よろしいですか？" }, class: "btn btn-danger" %>
           </td>
         </tr>
       </tbody>
