@@ -19,6 +19,22 @@ class UsersController < ApplicationController
     end
   end
   
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "ユーザーを更新しました。"
+      # 最終的にユーザー一覧ページにリダイレクトしたいが、無いので取り敢えずshowページにリダイレクトしておく
+      redirect_to user_path(@user.id)
+      # redirect_to users_path
+    else
+      render :edit
+    end
+  end
+  
   private
   
     def user_params
