@@ -10,12 +10,12 @@
           <%= link_to "アカウント作成", '#', class: "btn btn-lg btn-success disabled" %>
         </div>  
       <% else %>
-        <%= link_to "アカウント作成", '#', class: "btn btn-lg btn-success" %>
+        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" %>
       <% end %>
       <% unless logged_in? %>  
         <div class="between_button">
-          <%= link_to "ゲストログイン（管理権限）", '#', class: "btn btn-danger" %>
-          <%= link_to "ゲストログイン（一般権限）", '#', class: "btn btn-warning" %>
+          <%= link_to "ゲストログイン（管理権限）", guest_admin_login_path, method: :post, class: "btn btn-danger" %>
+          <%= link_to "ゲストログイン（一般権限）", guest_login_path, method: :post, class: "btn btn-warning" %>
         </div>
       <% end %>
     </div>

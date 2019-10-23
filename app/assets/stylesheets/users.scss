@@ -1,0 +1,19 @@
+// users#index
+
+.label-user-division {
+    margin-left: 5px;
+}
+
+table, .table { //,table>thead>tr, table>thead>tr>th,  .table>thead>tr ,.table>thead>tr>th {
+    border-top: none!important;
+    border-bottom: none!important;
+}
+
+table>thead, .table>thead
+  {
+    border-bottom: 2px solid #ddd!important;
+}
+
+table>tbody, table>tbody>tr, table>tbody>tr>td, .table>tbody, .table>tbody>tr, .table>tbody>tr>td  {
+    border-top: 1px solid #ddd!important;
+}

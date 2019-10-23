@@ -35,6 +35,18 @@ class UsersController < ApplicationController
     end
   end
   
+  def index
+    @users = User.paginate(page: params[:page], per_page: 20)
+  end
+  
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "タスクを削除しました。"
+    redirect_to users_path
+  end
+  
+  
   private
   
     def user_params
