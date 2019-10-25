@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: [:index]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user_or_correct_user, only: :show
+  before_action :admin_user_or_not_logged_in_user, only: :new
   
   def show
   end
