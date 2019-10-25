@@ -17,3 +17,10 @@ table>thead, .table>thead
 table>tbody, table>tbody>tr, table>tbody>tr>td, .table>tbody, .table>tbody>tr, .table>tbody>tr>td  {
     border-top: 1px solid #ddd!important;
 }
+
+//　プロフィール画面 id 名前 メールアドレス 作成日 のラベルボールド
+#table-user-details>tbody>tr>th{
+    font-weight: bold;
+}
+
+    
