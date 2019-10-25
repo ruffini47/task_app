@@ -21,9 +21,9 @@
       </tbody>
     </table>
     <div>
-      <%= link_to "編集", edit_user_task_path(@user.id, @task), class: "btn btn-success" %>
+      <%= link_to "編集", edit_user_task_path(@user.id, @task), class: "btn btn-lg btn-success" %>
       <%= link_to "削除", user_task_path(@user.id, @task), method: :delete,
-                  data: { confirm: "「#{@task.title}」を削除します。よろしいですか？" }, class: "btn btn-danger" %>
+                  data: { confirm: "「#{@task.title}」を削除します。よろしいですか？" }, class: "btn btn-lg btn-danger" %>
     </div>
   </div>
 </div>  
