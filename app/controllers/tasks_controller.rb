@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:new, :create, :index, :show, :edit, :update, :destroy]
-  before_action :set_task_set_user, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  before_action :set_userid, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   before_action :correct_user,   only: [:new, :create, :index, :show, :edit, :update, :destroy]
   
   
@@ -60,8 +60,8 @@ class TasksController < ApplicationController
       @task = Task.find_by(id:params[:id], user_id:params[:user_id])
     end
     
-    def set_task_set_user
-      @tasks = Task.where(user_id:params[:user_id])
-      @user = User.find_by(id: params[:user_id])
+    def set_userid
+      # @tasks = Task.where(user_id:params[:user_id])
+      @user = User.find_by(id:params[:user_id])
     end
 end
