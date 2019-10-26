@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   
   
   def index
-    @tasks = Task.where(user_id:params[:user_id])
+    @tasks = Task.where(user_id:params[:user_id]).order(created_at: :desc)
     @user = User.find_by(id: params[:user_id])
   end
   
