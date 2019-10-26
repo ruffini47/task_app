@@ -30,9 +30,11 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(user_params)
       flash[:success] = "ユーザーを更新しました。"
-      # 最終的にユーザー一覧ページにリダイレクトしたいが、無いので取り敢えずshowページにリダイレクトしておく
+      # ユーザー詳細ページへ遷移する
       redirect_to user_path(@user.id)
-      # redirect_to users_path
+      
+      # ユーザー一覧ページへ遷移する
+      #redirect_to users_path
     else
       render :edit
     end

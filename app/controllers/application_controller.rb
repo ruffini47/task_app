@@ -14,6 +14,13 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
     end
   end
+
+  def logged_out_user
+    if logged_in?
+        flash[:danger] = "すでにログインしています。"
+        redirect_to user_url(current_user.id)
+    end
+  end      
   
   # システム管理権限所有かどうか判定します。
   def admin_user
