@@ -45,8 +45,15 @@ class ApplicationController < ActionController::Base
     redirect_to root_url  unless (current_user.admin? || current_user?(@user))
   end
   
+  #ログインしている管理者かログアウト状態の場合認可する機能を追加
   def admin_user_or_not_logged_in_user
-    redirect_to root_url  unless (!logged_in? || current_user.admin?)
+
+    if logged_in? and current_user.admin?
+    elsif logged_in?
+      flash[:danger] = "すでにログインしています。"
+      # ユーザー詳細ページへリダイレクト
+      redirect_to user_path(current_user.id)
+    end
   end
-  
+
 end
