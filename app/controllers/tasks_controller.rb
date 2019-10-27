@@ -34,7 +34,7 @@ class TasksController < ApplicationController
     @task.user_id= params[:user_id]
     if @task.update_attributes(task_params)
       flash[:success] = "タスクを更新しました。"
-      redirect_to user_tasks_path(params[:user_id])
+      redirect_to user_task_path(params[:user_id], params[:id])
     else
       render :edit
     end
