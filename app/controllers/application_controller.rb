@@ -32,6 +32,14 @@ class ApplicationController < ActionController::Base
     redirect_to root_url unless current_user?(@user)
   end
   
+  # edit update前にアクセスしたユーザーが現在ログインしているユーザーでない場合警告してタスク一覧ページへリダイレクト。
+  def correct_user_for_edit_update
+    unless current_user?(@user)
+      flash[:danger] = "権限がありません。"
+      redirect_to user_tasks_path(current_user.id)
+    end
+  end
+  
   # 管理者、またはログインユーザー本人である場合認可する機能を追加
   def admin_user_or_correct_user
     redirect_to root_url  unless (current_user.admin? || current_user?(@user))
