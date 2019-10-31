@@ -1,3 +1,10 @@
+<!--
+<% text = "aaa https://google.com bbb http://yahoo.co.jp ccc http ddd https://google.com" %>
+<% URI.extract(text , ["http","https"]).uniq.each do |url| %>
+<% text.gsub!(url, "<a href=\"#{url}\" target=\"_blank\">#{url}</a>") %>
+<% end %>
+<%= text %>
+-->
 <h1>タスク詳細</h1>
 <div class="row">  
   <div class="col-md-10 col-md-offset-1">
@@ -10,7 +17,7 @@
           <th class="active">名称</th><td><%= @task.title %></td>
         </tr>
         <tr>
-          <th class="active">詳細</th><td id="details"><%= @task.details %></td>
+          <th class="active">詳細</th><td id="details"><%= text_url_to_link(@task.details).html_safe %></td>
         </tr>
         <tr>
           <th class="active">作成日</th><td><%= l(@task.created_at, format: :long) %></td>
